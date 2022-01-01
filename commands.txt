@@ -1,0 +1,59 @@
+########################
+### Usefull commands ### 
+########################
+
+- check which kernel version currently the system is running 
+$uname -a 
+
+- kernel version 
+$uname -v 
+
+- check for free Disk space 
+$df -ah // a = all file systems including virtual , h = human readable 
+
+- start/status/restart/stop services 
+$systemctl <command> <service name> 
+
+- total size of a directory 
+$du -sh <dir name>
+
+- check for the CPU usage and other information about a specific process 
+$ps uax | grep <service name>
+
+- checking for existing mounts 
+$mount 
+
+- mount disk to the system (i.e discon-key) 
+$cd /mnt //the dir where stuff gets mounted in 
+$mount /path/to/mount /mnt
+
+- copy from one machine to another
+$scp user@machineName:/path-at-the-machine-to-file outpath
+
+########################
+### Linux networking ### 
+########################
+
+- forward all ips incase they are not mine
+$echo 1 > sudo /proc/sys/net/ipv4/ip_forward
+
+- see all interfaces and they status UP,LOWER_UP 
+$ip link // UP - configured, LOWER_UP - phisycal connection established 
+
+- see ip address for each of the interfaces 
+$ip addr 
+
+- check for open ports on TCP/UDP that are listening, add sudo for service type on each port 
+$sudo netstat -tulpn
+
+- list all available WIFI networks 
+$nmcli dev wifi list
+
+########################
+###        jq        ###
+########################
+
+- exmple:
+$ cat filename.json  |jq ' .[]| {"field1", "field2" }  | select(.field1==0)' |jq -s . > out.json
+
+
