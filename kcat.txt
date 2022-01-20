@@ -1,0 +1,7 @@
+kafkacat usefull command lines:
+
+kafkacat -b <broker:port> -t <topic> -C <consumer>
+for example 
+kafkacat -b localhost:9092 -t mysql_users
+
+more exacmpoles: https://docs.confluent.io/platform/current/app-development/kafkacat-usage.html 
