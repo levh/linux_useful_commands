@@ -30,6 +30,9 @@ $mount /path/to/mount /mnt
 - copy from one machine to another
 $scp user@machineName:/path-at-the-machine-to-file outpath
 
+- view dir content ordered
+tree / -d -L 1
+
 ########################
 ### Linux networking ### 
 ########################
